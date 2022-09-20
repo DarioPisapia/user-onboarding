@@ -1,0 +1,39 @@
+@import "../../../styles.css";
+
+.checkbox{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+input{
+    margin: 0;
+    margin-top: 10px;
+}
+
+.checkboxLabel {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: baseline;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    width: 80px;
+    height: 90px;
+    letter-spacing: 0.02em;
+    background: #FFFFFF;
+    border: 1.5px solid #D5D9DC;
+    color: #0B1D2E;
+}
+
+.activeCheck {
+    background: #F7FBFF;
+    border: 1.5px solid #35A0EE;
+    color:#35A0EE;
+}

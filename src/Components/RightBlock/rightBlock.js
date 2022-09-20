@@ -1,13 +1,24 @@
 import FormComponent from "./formComponent"
-import arrow from "./img/Arrow.png"
-import backArrow from "./img/BackArrow.png"
-import whiteArrow from "./img/whiteArrow.png"
-import setPage from "./App.js"
-import page from "./App.js"
-export default function RightBlock({page, setPage}){
+import arrow from "../../img/Arrow.png"
+import backArrow from "../../img/BackArrow.png"
+import whiteArrow from "../../img/whiteArrow.png"
+import { useState } from "react"
+import styles from "./rightBlock.css"
 
+/* import setPage from "../../App.js"
+import page from "../../App.js" */
+export default function RightBlock({page, setPage}){
+    const [data, setData] = useState({name : "", prefix: "+39", phone: "", email: "", country:"", minMoney:"10000",
+                                        maxMoney: "50000", accredited:"", interestedIn:[]})
     function handleNextClick() {
-        page < 3 ? setPage(page+1) : alert('submittazione!!!')
+        page < 3 ? setPage(page+1) : alert(
+            `Name: ${data.name}
+Phone: ${data.prefix} ${data.phone}
+Email: ${data.email}
+Country: ${data.country}
+Investment between ${data.minMoney}$ and ${data.maxMoney}$
+Accredited: ${data.accredited}
+Interests: ${data.interestedIn}  `)
         
     }
 
@@ -27,7 +38,7 @@ export default function RightBlock({page, setPage}){
                 <a href="https://www.youtube.com/watch?v=2Q_ZzBGPdqE" target="_blank"> Get help <img src={arrow}/></a> 
             </span>
         </div>
-        <FormComponent page={page} />   
+        <FormComponent page={page} data={data} setData={setData} />   
         <div className="footer">
             <a onClick={handleBack}><img src={backArrow}/> {page === 1 ? ' Back to the homepage' : ' Back to the previous step'}</a>
             <div className="buttons">

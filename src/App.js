@@ -1,6 +1,6 @@
 import { useState } from "react"
-import LeftBlock  from "./leftBlock"
-import RightBlock from "./rightBlock"
+import LeftBlock  from "./Components/LeftBlock/leftBlock.js"
+import RightBlock from "./Components/RightBlock/rightBlock.js"
 
 export default function App() {
     const [page, setPage] = useState(1)

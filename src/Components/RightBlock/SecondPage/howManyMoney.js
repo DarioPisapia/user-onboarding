@@ -1,17 +1,19 @@
 import { useState } from "react";
-import { handleInputFocus } from "./formComponent";
+import { handleInputFocus } from "../formComponent";
 import {Slider} from '@material-ui/core'
 
-export default function HowManyMoney(){
+export default function HowManyMoney({data, setData}){
     const [money, setMoney] = useState({min: 10000, max: 50000})
     const [value, setValue] = useState([0, 20])
 
     function handleMin(e){
+        setData({...data, minMoney: e.target.value})
         setMoney({...money, min: e.target.value})
         setValue([value[0]=moneyToValue(e.target.value), value[1]])
     }
 
     function handleMax(e){
+        setData({...data, maxMoney: e.target.value})
         setMoney({...money, max: e.target.value})
         setValue([value[0], value[1]=moneyToValue(e.target.value)]) 
     }
@@ -47,42 +49,44 @@ export default function HowManyMoney(){
         let moneyMax = 0
         switch(value[0]){
             case 0:
-            moneyMin = 10000
+            data.minMoney = 10000
                 break
             case 20:
-                moneyMin = 50000
+                data.minMoney = 50000
                     break
             case 40:
-                moneyMin = 100000  
+                data.minMoney = 100000  
                     break
             case 60:
-                moneyMin = 200000
+                data.minMoney = 200000
                     break 
             case 80:
-                moneyMin = 500000
+                data.minMoney = 500000
                     break
             case 100:
-                moneyMin = 1000000
+                data.minMoney = 1000000
                     break
         }
         switch(value[1]){
+            case value[1]===data.maxMoney:
+                break
             case 0:
-                moneyMax = 10000
+                data.maxMoney = 10000
                 break
             case 20:
-                moneyMax = 50000
+                data.maxMoney = 50000
                     break
             case 40:
-                moneyMax = 100000  
+                data.maxMoney = 100000  
                     break
             case 60:
-                moneyMax = 200000
+                data.maxMoney = 200000
                     break 
             case 80:
-                moneyMax = 500000
+                data.maxMoney = 500000
                     break
             case 100:
-                moneyMax = 1000000
+                data.maxMoney = 1000000
                     break
         }
         setMoney({min: moneyMin, max: moneyMax})
@@ -93,46 +97,41 @@ export default function HowManyMoney(){
     return(
         <>  
         <div className="firstLine">
-            <MinMoney handleMin={handleMin} money={money.min}/>
-            <MaxMoney handleMax={handleMax} money={money.max}/>
+            <MinMoney handleMin={handleMin} money={money.min} data={data} setData={setData} value={data.minMoney} />
+            <MaxMoney handleMax={handleMax} money={money.max} data={data} setData={setData} value={data.maxMoney}/>
         </div>
         <Slide value={value} setValue={setValue} handleValue={handleValue}/>
         </>     
     )
 }
 
-function MinMoney({handleMin, money}){
-    const [active, setActive] = useState(true)
+function MinMoney({handleMin, money, data}){
+    const [active, setActive] = useState(false)
  
-    const label = 'minMoneyLabel'
-    const input = 'minMoney'
+   
+
     return (
         <div >
-            <label id="minMoneyLabel" for="name" className="labels" style={{marginTop: '10px'}}>From</label>
-            <input onChange={handleMin} value={money} id="minMoney" className="name"
-            onFocus={(e) => {setActive(false)
-                handleInputFocus(active, label, input)}}
-            onBlur={(e) => {setActive(true)
-                handleInputFocus(active, label)}}>
+            <label id="minMoneyLabel" for="name" className={`labels ${active ? 'activelabel' : ''}`}  style={{marginTop: '10px'}}>From</label>
+            <input onChange={handleMin} value={data.minMoney} id="minMoney" className={`name ${active ? 'active' : ''}`}
+            onFocus={(e) => setActive(!active)}
+            onBlur={(e) => setActive(!active)}
+            
+            >
             </input>
         </div>
     ) 
 }
 
-function MaxMoney({handleMax, money}){
-    const [active, setActive] = useState(true)
+function MaxMoney({handleMax, money, data, setData}){
+    const [active, setActive] = useState(false)
     
-    const label = 'maxMoneyLabel'
-    const input = 'maxMoney'
     return (
         <div>
-            <label id="maxMoneyLabel" for="name" className="labels" style={{marginTop: '10px'}}>To</label>
-            <input onChange={handleMax} value={money} id="maxMoney" className="name"
-            onFocus={(e) => {setActive(false)
-                handleInputFocus(active, label, input)}}
-            onBlur={(e) => {setActive(true)
-                handleInputFocus(active, label)}}>
-
+            <label id="maxMoneyLabel" for="name" className={`labels ${active ? 'activelabel' : ''}`} style={{marginTop: '10px'}}>To</label>
+            <input onChange={handleMax} value={data.maxMoney} id="maxMoney" className={`name ${active ? 'active' : ''}`}
+            onFocus={(e) => setActive(!active)}
+            onBlur={(e) => setActive(!active)}>
             </input>
         </div>
     ) 
@@ -148,14 +147,14 @@ function Slide({value, handleValue}){
                         ];
 
     return(
-        <div className="sliderContainer">
+        <div className="sliderContainer" style={{marginTop: '20px', marginLeft: '6px'}}>
             <Slider
                 aria-label="Custom marks"
                 valueLabelDisplay="off"
                 step='20'
                 value={value}
                 onChange={handleValue}
-                marks={customMarks}   
+                marks={customMarks}
             />  
         </div> 
     )

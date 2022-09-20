@@ -37,7 +37,7 @@ button{
     border-radius: 8px
 }
 /* ------------------------------------------- left block ---------------------------------------*/
-.leftBlock {
+/* .leftBlock {
     position: absolute;
     width: 36%;
     height: 100%;
@@ -165,9 +165,9 @@ button{
     letter-spacing: 0.02em;
     color: #07111B;
 }
-
+ */
 /* ---------------------------------------- right block -----------------------------------------*/
-.rightBlock{
+/* .rightBlock{
     position: absolute;
     left: 36%;
     height: 100%;
@@ -244,9 +244,6 @@ button{
     width: 70%;
     justify-content:space-between;
     align-items: center;
-    /*     display: flex;
-    justify-content: center;
-    align-items: center; */
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
@@ -258,9 +255,7 @@ button{
 .buttons{
     display: flex;
     justify-content: space-between;
-    /* width: 190px; */
     gap: 10px;
-    /* height: 36px; */
 }
 .skipButton{
     display: flex;
@@ -291,10 +286,10 @@ button{
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
-}
+} */
 
 /* ------------------------------------------ form first page -------------------------------------*/
-.form{
+/* .form{
     position:absolute;
     left: 15%;
     top: 30%;
@@ -437,7 +432,7 @@ select:focus {
 :checked + label {
     color: #35A0EE;
     caret-color: #35A0EE;
-}
+} */
 /* -------------------------------- form second page ----------------------------------------- */
 
 
