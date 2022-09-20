@@ -39,7 +39,7 @@ function Box ({ name, id, data, setData }) {
     const [active, setActive] = useState(false)
 
     function handleChange(e){
-       if(data.interestedIn.includes(e.target.name)){
+       if(data.interestedIn.includes(e.target.name)){  
         setData({...data, interestedIn: [data.interestedIn.filter(b => b!==e.target.name)]})
        } else{
         setData({...data, interestedIn: [...data.interestedIn, e.target.name]})
@@ -56,7 +56,7 @@ function Box ({ name, id, data, setData }) {
                 id={id}
                 name={name}
                 value={name}
-                onClick={handleChange}
+                onChange={handleChange}
                 ></input>
             {name}</label>
         </>

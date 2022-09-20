@@ -1,31 +1,8 @@
 import { useState } from "react"
-import arrow from "../../../img/Arrow.png"
-import { handleInputFocus } from "../formComponent"
 import italyFlag from "../../../img/flags/italyFlag.jpeg"
 import usaFlag from "../../../img/flags/usaFlag.jpeg"
 
-export default function FirstPageForm({data, setData}){
-    return(
-        <>
-            <div className="form">
-                <div className="firstLine">
-                    <Name data={data} setData={setData}/>
-                    <PhoneNumber data={data} setData={setData}/>
-                </div>
-                <Email data={data} setData={setData}/>
-                <Country data={data} setData={setData} />
-                <p className="title" style={{marginTop: '20px', fontSize: '14px'}}>Privacy policy</p>
-                <p className="description">We know you care about how your personal information is used and shared, so we take your privacy seriously</p>
-                <p className="privacy">Lost or have trouble?
-                    <a href="https://www.youtube.com/watch?v=i6tRNyzRj88" target="_blank"> Expand privacy policy <img className="freccettasx" src={arrow}/></a> 
-                </p>
-            </div>
-        </>
-    )
-}
-
-
-function Name({data, setData}){
+export function Name({data, setData}){
     const [active, setActive] = useState(false)
 
     function handleName(e){
@@ -46,7 +23,7 @@ function Name({data, setData}){
     ) 
 }
 
-function PhoneNumber({data, setData}){
+export function PhoneNumber({data, setData}){
     const [active, setActive] = useState(false)
 
     function handlePhone(e){
@@ -72,12 +49,11 @@ function PhoneNumber({data, setData}){
                 <input className='number' id='number' value={data.phone} onChange={handlePhone}
                 ></input>
             </div>
-        </>
-        
+        </>     
     )
 }
 
-function Email({data, setData}){
+export function Email({data, setData}){
     const [active, setActive] = useState(false)
 
     function handleMail(e){
@@ -93,14 +69,12 @@ function Email({data, setData}){
             onChange={handleMail}
             value={data.email}
             >
-                
             </input>
-        </>
-        
+        </>      
     )
 }
 
-function Country ({data, setData}) {
+export function Country ({data, setData}) {
     const [active, setActive] = useState(false)
 
     function handleCountry(e){
@@ -119,6 +93,5 @@ function Country ({data, setData}) {
                     <option value="usa">U.S.A</option>
                 </select>
         </>
-    )
-    
+    )   
 }

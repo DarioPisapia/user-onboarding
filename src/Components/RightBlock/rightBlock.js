@@ -4,13 +4,13 @@ import backArrow from "../../img/BackArrow.png"
 import whiteArrow from "../../img/whiteArrow.png"
 import { useState } from "react"
 import styles from "./rightBlock.css"
-
+import validateFirstPage from "./FirstPage/validationFunctions.js"
 /* import setPage from "../../App.js"
 import page from "../../App.js" */
 export default function RightBlock({page, setPage}){
     const [data, setData] = useState({name : "", prefix: "+39", phone: "", email: "", country:"", minMoney:"10000",
                                         maxMoney: "50000", accredited:"", interestedIn:[]})
-    function handleNextClick() {
+/*     function handleNextClick() {
         page < 3 ? setPage(page+1) : alert(
             `Name: ${data.name}
 Phone: ${data.prefix} ${data.phone}
@@ -20,6 +20,27 @@ Investment between ${data.minMoney}$ and ${data.maxMoney}$
 Accredited: ${data.accredited}
 Interests: ${data.interestedIn}  `)
         
+    } */
+    function handleNextClick(){
+        if (page===1){
+            if(validateFirstPage(data)){
+               setPage(page+1) 
+            }
+        }
+        if (page===2){
+            /* ci andrà la validazione, per ora skippo */
+            setPage(page+1)
+        }
+        if (page===3){
+            alert(
+                `Name: ${data.name}
+Phone: ${data.prefix} ${data.phone}
+Email: ${data.email}
+Country: ${data.country}
+Investment between ${data.minMoney}$ and ${data.maxMoney}$
+Accredited: ${data.accredited}
+Interests: ${data.interestedIn}  `)
+        }
     }
 
     const handleSkip = () => {

@@ -1,7 +1,7 @@
 import { useState } from "react"
 
-import FirstPageForm from "./FirstPage/firstPageForm"
-import SecondPageForm from "./SecondPage/secondPageForm"
+import FirstPageForm from "./FirstPage/firstPage"
+import SecondPageForm from "./SecondPage/secondPage"
 import ThirdPageForm from "./ThirdPage/thirdPageForm"
 
 export default function FormComponent({page, data, setData}){
