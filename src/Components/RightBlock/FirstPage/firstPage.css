@@ -1,1 +1,112 @@
 @import "../../../styles.css";
+
+.form{
+    position:absolute;
+    left: 15%;
+    top: 30%;
+    width: 70%
+}
+
+.firstLine{
+    display: flex;
+    justify-content:space-between;
+    font-family: 'Montserrat';
+    font-style: normal;
+    letter-spacing: 0.02em;
+    width: 85%;
+}
+.labels{
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    color: #A4AEB4;
+    margin-top: 20px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    letter-spacing: 0.02em;
+    width: 85%;
+}
+.name {
+    border: 0;
+    border-bottom: 2px solid #D5D9DC;
+    font-weight: 600;
+    font-size: 14px;
+    color: #0B1D2E;
+    font-family: 'Montserrat';
+    font-style: normal;
+    letter-spacing: 0.02em;
+}
+
+
+.flags{
+    padding-bottom: 0.5px;
+    width: 30px;
+}
+.phoneNumber{
+    border: 0;
+    border-bottom: 2px solid #D5D9DC;
+    font-weight: 600;
+    font-size: 14px;
+    color: #0B1D2E;
+}
+
+.phonelabel{
+    color: #35A0EE;
+}
+
+.number{
+    border: 0;
+    font-weight: 600;
+    font-size: 14px;
+    color: #0B1D2E;
+    font-weight: 600;
+    font-family: 'Montserrat';
+    font-style: normal;
+    letter-spacing: 0.02em;
+}
+.flags{
+    border: 0;
+}
+.phoneActive{
+    outline: none;
+    color: #35A0EE;
+    border-bottom: 2px solid #35A0EE;
+    background-color: #FFFFFF;
+    caret-color: #35A0EE
+}
+.email{
+    padding: 0;
+    border: 0;
+    border-bottom: 2px solid #D5D9DC;
+    font-weight: 600;
+    font-size: 14px;
+    color: #0B1D2E;
+    font-family: 'Montserrat';
+    font-style: normal;
+    letter-spacing: 0.02em;
+    width: 85%;
+}
+
+.country{
+    border: 0;
+    margin-top: 10px;
+    border-bottom: 2px solid #D5D9DC;
+    font-weight: 600;
+    font-size: 14px;
+    color: #0B1D2E;
+    font-family: 'Montserrat';
+    font-style: normal;
+    letter-spacing: 0.02em;
+    width: 85%;
+}
+
+.privacy{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    color: #A4AEB4;
+    margin: 0;
+}

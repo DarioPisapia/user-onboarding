@@ -4,6 +4,7 @@ import { handleInputFocus } from "../formComponent"
 import italyFlag from "../../../img/flags/italyFlag.jpeg"
 import usaFlag from "../../../img/flags/usaFlag.jpeg"
 import  {Name, PhoneNumber, Email, Country} from "./firstPageComponents"
+import style from "./firstPage.css"
 
 
 export default function FirstPageForm({data, setData}){
