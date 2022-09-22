@@ -110,3 +110,26 @@
     color: #A4AEB4;
     margin: 0;
 }
+
+.activelabel{
+    outline: none;
+    color: #35A0EE;
+}
+.active{
+    outline: none;
+    border-bottom: 2px solid #35A0EE;
+    background-color: #FFFFFF;
+    caret-color: #35A0EE
+}
+
+select:focus {
+    outline: none;
+}
+input:focus{
+    outline: none;
+}
+:checked + label {
+    color: #35A0EE;
+    caret-color: #35A0EE;
+}
+
