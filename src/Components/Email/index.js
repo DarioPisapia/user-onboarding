@@ -14,7 +14,7 @@ export default function Email({data, setData}){
                 for="email" 
                 className={`labels ${active ? "activelabel" : ""}`} 
                 id='emailLabel'
-            >
+                >
                     E-mail address
             </label>
             <input 
@@ -24,7 +24,7 @@ export default function Email({data, setData}){
                 onBlur={(e) => setActive(!active)}
                 onChange={handleMail}
                 value={data.email}
-            >
+                >
             </input>
         </>      
     )

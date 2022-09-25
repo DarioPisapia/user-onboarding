@@ -1,18 +1,16 @@
 import styles from "./styles.css"
 import CheckBox from "../CheckBox"
+import { useState } from "react"
 
-export default function CheckboxContainer ({data, setData}){
-    const choices = ['Single family', 'Residential multifamily', 'Commercial retail', 'Commercial industrial',
-                    'Commercial hospitality', 'Commercial warehousing', 'Commercial office', 'Other']
-
+export default function CheckboxContainer ({ onChange, choices }){
 
     let boxes = choices.map((c, id) => {
         return(
             <CheckBox 
-                name={c}
+                label={c.label}
                 id={`box${id}`}
-                data={data}
-                setData={setData}
+                active={c.active}
+                onChange={onChange}
             />
         )
     })

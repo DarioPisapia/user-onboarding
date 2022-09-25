@@ -57,8 +57,20 @@ Interests: ${data.interestedIn}  `)
         <div className="footer">
             <a onClick={handleBack}><img src={backArrow}/> {page === 1 ? ' Back to the homepage' : ' Back to the previous step'}</a>
             <div className="buttons">
-            <button type="button" className="skipButton" onClick={handleSkip}>Skip for now</button>
-            <button type="button" className="nextButton" onClick={handleNextClick}>{page < 3 ? (<> Next step <img src={whiteArrow}/></>) : 'Finish'}</button>
+            <button 
+                type="button" 
+                className="skipButton" 
+                onClick={handleSkip}
+                >
+                Skip for now
+            </button>
+            <button 
+                type="button" 
+                className="nextButton" 
+                onClick={handleNextClick}
+                >
+                {page < 3 ? (<> Next step <img src={whiteArrow}/></>) : 'Finish'}
+            </button>
             </div>
            
         </div>

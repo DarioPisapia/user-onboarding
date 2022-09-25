@@ -14,7 +14,7 @@ export default function Country ({data, setData}) {
                 for="country" 
                 className={`labels ${active ? "activelabel" : ""}`} 
                 id='countryLabel'
-            >
+                >
                 Country
             </label>
             <select 
@@ -23,7 +23,7 @@ export default function Country ({data, setData}) {
                 onFocus={(e) => setActive(!active)}
                 onBlur={(e) => setActive(!active)}
                 onChange={handleCountry}    
-            >
+                >
                 <option value="italy">Italy</option>
                 <option value="usa">U.S.A</option>
             </select>

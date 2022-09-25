@@ -22,7 +22,7 @@ export default function PhoneNumber({data, setData}){
                     for="phone" 
                     className={`labels ${active ? "phonelabel" : ""}`} 
                     id='phones'
-                >
+                    >
                     Phone number
                 </label>
                 <select 
@@ -31,7 +31,7 @@ export default function PhoneNumber({data, setData}){
                     onChange={(e) => {
                         setData({...data, prefix: e.target.value})
                     }}
-                >
+                    >
                     <option value="+39" >Ita{<img src={italyFlag}/>}</option>{/* qui mettere le immagini */}
                     <option value="+1">U.S.A.<img src={usaFlag}/></option>
                 </select>

@@ -98,8 +98,8 @@ export default function HowManyMoney({data, setData}){
     return(
         <>  
         <div className="firstLine">
-            <Money handleMinOrMax={handleMin} value={data.minMoney} />
-            <Money handleMinOrMax={handleMax} value={data.maxMoney}/>
+            <Money handleMinOrMax={handleMin} value={data.minMoney} id="minMoney"/>
+            <Money handleMinOrMax={handleMax} value={data.maxMoney} id="maxMoney"/>
         </div>
         <SlideMoney value={value} setValue={setValue} handleValue={handleValue}/>
         </>     

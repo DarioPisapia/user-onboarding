@@ -14,7 +14,7 @@ export default function Name({data, setData}){
                 id="nameLabel" 
                 for="name" 
                 className={`labels ${active ? "activelabel" : ""}`}
-            >
+                >
                 Full name
             </label>
             <input 
@@ -24,7 +24,7 @@ export default function Name({data, setData}){
                 onBlur={(e) => setActive(!active)}
                 onChange={handleName}
                 value={data.name} 
-            >
+                >
             </input>
         </div>
     ) 
