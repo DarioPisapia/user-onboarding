@@ -1,0 +1,43 @@
+@import "../../styles.css";
+
+
+.radioLabel{
+    display: flex;
+    align-items: center;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    padding-left: 10px;
+    width: 96px;
+    height: 36px;
+    letter-spacing: 0.02em;
+    background: #FFFFFF;
+    border: 1.5px solid #D5D9DC;
+    color: #0B1D2E;
+}
+.radioLabel.active{
+    background-color: #F7FBFF;
+    border-color: #35A0EE;
+    color: #35A0EE;
+   
+}
+.activelabel{
+    outline: none;
+    color: #35A0EE;
+}
+.active{
+    outline: none;
+    border-bottom: 2px solid #35A0EE;
+    background-color: #FFFFFF;
+    caret-color: #35A0EE
+}
+
+input:focus{
+    outline: none;
+}
+:checked + label {
+    color: #35A0EE;
+    caret-color: #35A0EE;
+}

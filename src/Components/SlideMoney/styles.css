@@ -1,0 +1,52 @@
+@import "../../styles.css";
+
+
+.MuiSlider-thumb.MuiSlider-thumbColorPrimary{
+    color: #35A0EE;
+    border-radius: 1px;
+}
+
+.MuiSlider-mark.MuiSlider-mark{
+    background-color: #A1AFB8;
+    height: 12px;
+    top:8px
+}
+.MuiSlider-mark.MuiSlider-markActive{
+    background-color: #35A0EE;
+    height: 12px;
+    top: 8px;
+}
+
+.MuiSlider-markLabel.MuiSlider-markLabel{
+    color: #A1AFB8;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    
+}
+
+.MuiSlider-markLabel.MuiSlider-markLabelActive{
+    color: #35A0EE;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+
+
+.MuiSlider-track.MuiSlider-track{
+    color: #35A0EE;
+    height: 2px;
+}
+.MuiSlider-rail.MuiSlider-rail{
+    color: #D5D9DC;
+    height: 2px;
+}
+
+
+
+.sliderContainer{
+    width: 85%
+}

@@ -1,0 +1,46 @@
+@import "../../styles.css";
+
+
+.labels{
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    color: #A4AEB4;
+    margin-top: 20px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    letter-spacing: 0.02em;
+    width: 85%;
+}
+
+.activelabel{
+    outline: none;
+    color: #35A0EE;
+}
+
+.country{
+    border: 0;
+    margin-top: 10px;
+    border-bottom: 2px solid #D5D9DC;
+    font-weight: 600;
+    font-size: 14px;
+    color: #0B1D2E;
+    font-family: 'Montserrat';
+    font-style: normal;
+    letter-spacing: 0.02em;
+    width: 85%;
+}
+
+.active{
+    outline: none;
+    border-bottom: 2px solid #35A0EE;
+    background-color: #FFFFFF;
+    caret-color: #35A0EE
+}
+
+select:focus {
+    outline: none;
+}
+input:focus{
+    outline: none;
+}

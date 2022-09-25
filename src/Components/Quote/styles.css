@@ -1,0 +1,68 @@
+@import "../../styles.css";
+
+.lb-bottomsquare {
+    position: absolute;
+    width: 67%;
+    height: 26.67%;
+    left: 70px;
+    top: 67.5%;
+    background: #FFFFFF;
+    box-shadow: 0px 8px 20px rgba(3, 17, 6, 0.03);
+    border-radius: 4px;
+}
+
+.lb-vector{
+    position: absolute;
+    width: 48%;
+    height: 20%;
+}
+
+.lb-quotetext{
+    position: absolute;
+    padding-left: 10%;
+    top: 15%;
+    width: 77%;
+    height: 40%;
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 500;
+    font-size: 1.5vh;
+    letter-spacing: 0.02em;
+    color: #A4AEB4;
+}
+
+.lb-quoteAuthor{
+    font-family: 'Montserrat Alternates';
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: #07111B;
+}
+
+.UP {
+    position: absolute;
+    left: 80%;
+    top: 77%;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 2.9vh;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    color: #000000;
+}
+
+.lb-quotesquare{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    aspect-ratio: 1/1;
+    width: 40px;
+    left: 50px;
+    top: 65%;
+    background: #FFFFFF;
+    box-shadow: 16px 12px 56px rgba(11, 29, 46, 0.15);
+    border-radius: 3px;
+    font-family: mon;
+}
