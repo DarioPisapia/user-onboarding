@@ -1,0 +1,52 @@
+@import "../../styles.css";
+
+
+.flagShown{
+    width: 75%;
+    border-radius: 5px;
+}
+
+.arrowDown{
+    padding-left: 3px;
+    padding-right: 3px;
+    width: 6px;
+    height: 6px;
+}
+
+.dropdown{
+    display: inline-block;
+    width: 30px;
+    border: 0;
+}
+
+
+.dropdown-btn{
+    padding: 5px ;
+    background: #FFF;
+    font-weight: bold;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dropdown-content{
+    position: absolute;
+    z-index: 1000;
+    background: #FFF;
+    box-shadow: 3px 3px 10px 6px #D5D9DC;
+    color: #333;
+}
+
+/* .dropdown-item{
+    display: flex;
+    justify-content: center;
+    padding-top: 3px;
+    padding-bottom: 3px;
+} */
+
+.dropdown-item:hover{
+    background: #35A0EE;
+    cursor: pointer;
+    transition: all 0.2s;
+}

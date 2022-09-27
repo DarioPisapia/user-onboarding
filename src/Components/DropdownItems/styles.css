@@ -1,0 +1,8 @@
+@import "../../styles.css";
+
+.dropdown-item{
+    display: flex;
+    justify-content: center;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}

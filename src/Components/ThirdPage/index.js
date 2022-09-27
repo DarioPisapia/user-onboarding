@@ -1,6 +1,6 @@
 import { useState } from "react"
 import styles from "./styles.css"
-import CheckboxContainer from "../CheckboxContainer"
+import CheckBox from "../CheckBox"
 
 export default function ThirdPageForm({data, setData}){
 
@@ -13,7 +13,6 @@ export default function ThirdPageForm({data, setData}){
         {label: 'Commercial warehousing', active: false},
         {label: 'Commercial office', active: false},
         {label: 'Other', active: false},
-
     ])
 
     function handleCheckboxClick(label, active){
@@ -30,15 +29,23 @@ export default function ThirdPageForm({data, setData}){
         setData({...data, interestedIn : interests})
     }
 
+    const checkboxes = choices.map((c, id) => {
+        return(
+            <CheckBox 
+                label={c.label}
+                id={`box${id}`}
+                active={c.active}
+                onChange={handleCheckboxClick}
+            />
+        )
+    })
+
     return (
         <div className="form">
-    
             <p className="title" style={{marginTop: '20px', fontSize: '14px'}}>What kind of real estate are you interested in?</p>
-            <CheckboxContainer
-                onChange={handleCheckboxClick}
-                choices={choices}
-            />
-
+            <div className="checkbox" >
+                {checkboxes}
+            </div>
         </div>
     )
 }

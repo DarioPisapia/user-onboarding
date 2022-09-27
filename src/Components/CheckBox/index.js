@@ -1,5 +1,5 @@
 import styles from "./styles.css"
-import { useState } from "react"
+
 
 export default function CheckBox ({ label, id, active, onChange}) {
 

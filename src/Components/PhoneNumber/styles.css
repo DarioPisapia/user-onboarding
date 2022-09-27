@@ -20,7 +20,8 @@
     display: block;
     font-size: 12px;
     font-weight: 500;
-    color: #A4AEB4;
+    /* color: #A4AEB4; */
+    color: #35A0EE;
     margin-top: 20px;
     font-family: 'Montserrat';
     font-style: normal;
@@ -40,6 +41,9 @@
 }
 
 .number{
+    padding-left: 5px;
+    padding-bottom: 0px;
+    padding-top: 0px;
     border: 0;
     font-weight: 600;
     font-size: 14px;
@@ -48,6 +52,7 @@
     font-family: 'Montserrat';
     font-style: normal;
     letter-spacing: 0.02em;
+    width: 120px
 }
 
 .activelabel{
@@ -59,4 +64,11 @@ select:focus {
 }
 input:focus{
     outline: none;
+}
+
+.active{
+    outline: none;
+    border-bottom: 2px solid #35A0EE;
+    background-color: #FFFFFF;
+    caret-color: #35A0EE
 }
