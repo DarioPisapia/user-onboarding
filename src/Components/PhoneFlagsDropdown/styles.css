@@ -38,13 +38,6 @@
     color: #333;
 }
 
-/* .dropdown-item{
-    display: flex;
-    justify-content: center;
-    padding-top: 3px;
-    padding-bottom: 3px;
-} */
-
 .dropdown-item:hover{
     background: #35A0EE;
     cursor: pointer;

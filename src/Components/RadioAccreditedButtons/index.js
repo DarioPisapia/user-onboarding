@@ -33,7 +33,7 @@ export default function RadioButton ({label, onChange, value, active, setActive,
                 style={{margin: "0px 10px 0px 10px"}} 
                 onChange={onSelected}
                 checked={active[value]}
-                >
+            >
             </input>
             {label}
         </label>

@@ -28,14 +28,14 @@ export default function PhoneNumber({data, setData}){
     return (
         <>
             <div 
-                className={`phoneNumber ${active ? "phoneActive" : ""}`} 
+                className={`phoneNumber ${active || dropdownActive ? "phoneActive" : ""}` /* || `phoneNumber ${dropdownActive ? "phoneActive" : ""}` */} 
                 id="phone"
                 onFocus={(e) => setActive(!active)}
                 onBlur={(e) => setActive(!active)}
             >
                 <label 
                     for="phone" 
-                    className={`labels ${active ? "activelabel" : ""}`}
+                    className={`labels ${active ||dropdownActive ? "activelabel" : ""}`}
                     id='phones'
                     >
                     Phone number

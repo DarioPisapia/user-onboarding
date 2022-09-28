@@ -14,7 +14,7 @@ export default function Money ({handleMinOrMax, value, id}) {
                 className={`name ${active ? 'active' : ''}`}
                 onFocus={(e) => setActive(!active)}
                 onBlur={(e) => setActive(!active)} 
-                >
+            >
             </input>
         </div>
     ) 

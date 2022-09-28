@@ -61,14 +61,14 @@ Interests: ${data.interestedIn}  `)
                 type="button" 
                 className="skipButton" 
                 onClick={handleSkip}
-                >
+            >
                 Skip for now
             </button>
             <button 
                 type="button" 
                 className="nextButton" 
                 onClick={handleNextClick}
-                >
+            >
                 {page < 3 ? (<> Next step <img src={whiteArrow}/></>) : 'Finish'}
             </button>
             </div>

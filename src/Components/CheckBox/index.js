@@ -14,7 +14,8 @@ export default function CheckBox ({ label, id, active, onChange}) {
                 checked={active}
                 >
             </input>
-            {label}</label>
+            {label}
+        </label>
         </>
     )
 }
