@@ -1,0 +1,53 @@
+@import "../../styles.css";
+
+.footer{
+    display: inline-flex;
+    position: absolute;
+    top: 87%;
+    left: 15%;
+    width: 70%;
+    justify-content:space-between;
+    align-items: center;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    color: #A4AEB4;
+}
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+.skipButton{
+    display: flex;
+    align-items: center;
+    background: rgba(53, 160, 238, 0.1);
+    border-radius: 4px;
+    border-color: transparent;
+    color:#35A0EE;
+    padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+}
+.nextButton{
+    display: flex;
+    align-items: center;
+    background: #35A0EE;
+    border-radius: 4px;
+    border-color: transparent;
+    color:#FFFFFF;
+    padding:10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+}
