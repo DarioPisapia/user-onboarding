@@ -1,14 +1,6 @@
 
 @import "../../styles.css";
 
-.rightBlock{
-    position: absolute;
-    left: 36%;
-    height: 100%;
-    width: 64%;
-    background-color: #FFFFFF;
-    border-radius: 8px;
-}
 .header{
     position: absolute;
     width: 70%;
