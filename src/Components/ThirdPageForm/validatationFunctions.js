@@ -1,5 +1,5 @@
-import validateFirstPage from "../FirstPage/validationFunctions"
-import validateSecondPage from "../SecondPage/validationFunctions"
+import validateFirstPage from "../FirstPageForm/validationFunctions"
+import validateSecondPage from "../SecondPageForm/validationFunctions"
 
 export default function validateThirdPage(data){
     if (validateFirstPage(data)){
