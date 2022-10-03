@@ -16,40 +16,42 @@ export default function FormComponent({ page }){
                                         maxMoney: "50000", accredited:"", interestedIn:[]})    
                                         
     const navigate = useNavigate()   
-    const paths = ['occhio ad andare troppo indietro', "/", "/step2", "/step3", 'torna indietro non fare il furbo']
+
+    /* i have tried to make the handle functions (nextClick, skip, back) more abstract possibile using this obj. 
+    So if in the future i'll need a lot of pages i'll only have to modify this obj */
+    const handleObj = [
+        {"path": "You can't go back more than this"},
+        {"path": "/", "action": validateFirstPage},
+        {"path": "/step2", "action": validateSecondPage},
+        {"path": "/step3", "action": validateThirdPage},
+        {"path": "You can't skip this"}
+    ] 
 
     function handleNextClick(){
-        if (page===1){
-            if(validateFirstPage(data)){
-                navigate("/step2")
-            }
+        if(page < handleObj.length - 2){
+            if (handleObj[page]["action"](data)){
+              navigate(handleObj[page + 1]["path"])  
+            }       
+        }else{
+            if (handleObj[page]["action"](data)){
+                alert(
+                    `Name: ${data.name}
+                    Phone: ${data.prefix} ${data.phone}
+                    Email: ${data.email}
+                    Country: ${data.country}
+                    Investment between ${data.minMoney}$ and ${data.maxMoney}$
+                    Accredited: ${data.accredited}
+                    Interests: ${data.interestedIn}  `)
+            }       
         }
-        if (page===2){
-            if(validateSecondPage(data))
-                navigate("/step3")
-        }
-        if (page===3){
-            if (validateThirdPage(data)){
-                    alert(
-`Name: ${data.name}
-Phone: ${data.prefix} ${data.phone}
-Email: ${data.email}
-Country: ${data.country}
-Investment between ${data.minMoney}$ and ${data.maxMoney}$
-Accredited: ${data.accredited}
-Interests: ${data.interestedIn}  `)
-
-            }
-            
-        }
-    }   
+    }
 
     const handleSkip = () => { 
-        page < 3 ? navigate(paths[page+1]) : alert(paths[paths.length - 1])
+        page < 3 ? navigate(handleObj[page + 1]["path"]) : alert(handleObj[handleObj.length - 1]["path"])
     }
 
     const handleBack = () => {
-        page > 1 ? navigate(paths[page-1]) : alert(paths[0])
+        page > 1 ? navigate(handleObj[page - 1]["path"]) : alert(handleObj[0]["path"])
     }
     
     if(page===1){
