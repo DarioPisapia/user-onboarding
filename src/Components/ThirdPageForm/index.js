@@ -1,8 +1,11 @@
-import { useState } from "react"
+import { useState, useContext } from "react"
 import styles from "./styles.css"
 import CheckBox from "../CheckBox"
+import { DataContext } from "../FormComponent"
 
-export default function ThirdPageForm({data, setData}){
+export default function ThirdPageForm(){
+
+    const [data, setData ] = useContext(DataContext)
 
     const [choices, setChoices] = useState([
         {label: 'Single family', active: false},
@@ -29,22 +32,19 @@ export default function ThirdPageForm({data, setData}){
         setData({...data, interestedIn : interests})
     }
 
-    const checkboxes = choices.map((c, id) => {
-        return(
-            <CheckBox 
-                label={c.label}
-                id={`box${id}`}
-                active={c.active}
-                onChange={handleCheckboxClick}
-            />
-        )
-    })
-
     return (
         <div className="form">
             <p className="title" style={{marginTop: '20px', fontSize: '14px'}}>What kind of real estate are you interested in?</p>
             <div className="checkbox" >
-                {checkboxes}
+                {choices.map((c, id) => (
+                    <CheckBox 
+                    label={c.label}
+                    id={`box${id}`}
+                    active={c.active}
+                    onChange={handleCheckboxClick}
+                    data={data}
+                    />
+                ))}
             </div>
         </div>
     )

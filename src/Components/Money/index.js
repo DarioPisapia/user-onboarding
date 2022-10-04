@@ -1,12 +1,12 @@
 import styles from "./styles.css"
 import { useState } from "react"
 
-export default function Money ({handleMinOrMax, value, id}) {
+export default function Money ({handleMinOrMax, value, id, name}) {
     const [active, setActive] = useState(false)
 
     return (
         <div >
-            <label id="minMoneyLabel" for="name" className={`labels ${active ? 'activelabel' : ''}`}  style={{marginTop: '10px'}}>From</label>
+            <label id="minMoneyLabel" for="name" className={`labels ${active ? 'activelabel' : ''}`}  style={{marginTop: '10px'}}>{name}</label>
             <input 
                 onChange={handleMinOrMax} 
                 value={value} 

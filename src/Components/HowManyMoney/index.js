@@ -1,11 +1,13 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import Money from "../Money/index";
 import SlideMoney from "../SlideMoney/index";
 import styles from "./styles.css"
+import { DataContext } from "../FormComponent";
 
-export default function HowManyMoney({data, setData}){
+export default function HowManyMoney(){
     const [money, setMoney] = useState({min: 10000, max: 50000})
     const [value, setValue] = useState([0, 20])
+    const [data, setData] = useContext(DataContext)
 
     function handleMin(e){
         setData({...data, minMoney: e.target.value})
@@ -46,8 +48,8 @@ export default function HowManyMoney({data, setData}){
     }
 
     function sliderToMoney(value){
-        let moneyMin = 0
-        let moneyMax = 0
+        /* let moneyMin = 0
+        let moneyMax = 0 */
         switch(value[0]){
             case 0:
             data.minMoney = 10000
@@ -90,7 +92,7 @@ export default function HowManyMoney({data, setData}){
                 data.maxMoney = 1000000
                     break
         }
-        setMoney({min: moneyMin, max: moneyMax})
+        /* setMoney({min: moneyMin, max: moneyMax}) */
     }
 
 
@@ -98,8 +100,8 @@ export default function HowManyMoney({data, setData}){
     return(
         <>  
         <div className="firstLine">
-            <Money handleMinOrMax={handleMin} value={data.minMoney} id="minMoney"/>
-            <Money handleMinOrMax={handleMax} value={data.maxMoney} id="maxMoney"/>
+            <Money handleMinOrMax={handleMin} value={data.minMoney} id="minMoney" name="From"/>
+            <Money handleMinOrMax={handleMax} value={data.maxMoney} id="maxMoney" name="To"/>
         </div>
         <SlideMoney value={value} setValue={setValue} handleValue={handleValue}/>
         </>     

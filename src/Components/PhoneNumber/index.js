@@ -1,14 +1,17 @@
-import { useState } from "react"
+import { useState, useContext } from "react"
 import PhoneFlagsDropdown from "../PhoneFlagsDropdown"
 import italyFlag from "../../img/flags/italyFlag.jpeg"
 import usaFlag from "../../img/flags/usaFlag.jpeg"
 import styles from "./styles.css"
+import { DataContext } from "../FormComponent"
 
 
-export default function PhoneNumber({data, setData}){
+export default function PhoneNumber(){
     const [active, setActive] = useState(false)
     const [flagShown, setFlagShown] = useState(italyFlag)
     const [dropdownActive, setDropdownActive] = useState(false)
+    const [data, setData] = useContext(DataContext)
+
 
     const flags = [
         {img: italyFlag, value: '+39'},

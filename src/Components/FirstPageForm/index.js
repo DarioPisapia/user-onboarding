@@ -6,16 +6,16 @@ import PhoneNumber from "../PhoneNumber/index"
 import Email from "../Email/index"
 import Country from "../Country/index.js"
 
-export default function FirstPageForm({data, setData}){
+export default function FirstPageForm(){
     return(
         <>
             <div className="form">
                 <div className="firstLine">
-                    <Name data={data} setData={setData}/>
-                    <PhoneNumber data={data} setData={setData}/>
+                    <Name />
+                    <PhoneNumber />
                 </div>
-                <Email data={data} setData={setData}/>
-                <Country data={data} setData={setData} />
+                <Email />
+                <Country  />
                 <p className="title" style={{marginTop: '20px', fontSize: '14px'}}>Privacy policy</p>
                 <p className="description">We know you care about how your personal information is used and shared, so we take your privacy seriously</p>
                 <p className="privacy">Lost or have trouble?

@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import styles from "./styles.css"
+import { DataContext } from "../FormComponent";
 
-export default function Country ({data, setData}) {
+export default function Country () {
     const [active, setActive] = useState(false)
+    const [data, setData] = useContext(DataContext)
 
     function handleCountry(e){
         setData({...data, country: e.target.value})

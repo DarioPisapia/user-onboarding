@@ -13,14 +13,15 @@ export default function Footer ({ page, skip, back, onSubmit}){
             <div className="buttons">
                 <button 
                     type="button" 
-                    className="skipButton" 
+                    className={`skipButton ${page===3 ? "disabled" : ""}`}
                     onClick={skip}
+                    disabled={page===3}
                 >
                     Skip for now
                 </button>
                 <button 
                     type="button" 
-                    className="nextButton" 
+                    className= "nextButton"
                     onClick={onSubmit}
                 >
                     {page < 3 ? (<> Next step <img src={whiteArrow}/></>) : 'Finish'}
